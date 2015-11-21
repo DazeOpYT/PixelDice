@@ -1,0 +1,17 @@
+main: com.pixeldice.main.main
+version: 1.0
+name: PixelDice
+
+commands:
+ hello:
+   description: Says hello to a player.
+ goodbye:
+   description: Teleports you :P.
+ join:
+   description: Brings you to another world...     
+ leave:
+   description: You can leave the game...
+ cave:
+   description: Does something I guess...    
+ timer:
+   description: It's the final countdown...  
