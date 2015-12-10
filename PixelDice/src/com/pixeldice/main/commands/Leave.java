@@ -30,12 +30,18 @@ public List<String> Dwarfs = main.Dwarven;
 		    	  p.getInventory().clear();
 		    	  Location lobby = new Location(Bukkit.getWorld("cave"), -320, 55, -57);
 		          p.teleport(lobby); 
-		           for(String s: Elfs){
-		    	  Elfs.remove(name);
-		      }
-		    	for(String s: Dwarfs){
-		    		Dwarfs.remove(name);
-		    	}
+		          if(Elfs.contains(p.getName())){
+		        	  Elfs.remove(p.getName());
+		        	  p.getInventory().clear();
+			          p.teleport(lobby); 
+			          PlayersInLobby.remove(p);
+		          }
+		          if(Dwarfs.contains(p.getName())){
+		        	  Dwarfs.remove(p.getName());
+		        	  p.getInventory().clear();
+			          p.teleport(lobby); 
+			          PlayersInLobby.remove(p);
+		          }
 		      }
 		      
 		      

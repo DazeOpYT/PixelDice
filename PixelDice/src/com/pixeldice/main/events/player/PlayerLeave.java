@@ -32,9 +32,11 @@ public class PlayerLeave implements Listener {
 		   for(String s: PlayerNames){  
 		if(Dwarven.contains(name)){
 		   Dwarven.remove(name);
+		   PlayerNames.remove(p.getName());
 	   }else{
 		   if(Elfs.contains(name)){
 			   Elfs.remove(name);
+			   PlayerNames.remove(p.getName());
 		   }
 			   Bukkit.getPlayer(s).sendMessage(ChatColor.BLUE + "[" + ChatColor.AQUA + "PixelDice" + ChatColor.BLUE + "] " + ChatColor.GOLD + p.getName() + ChatColor.AQUA + " has left " + ChatColor.DARK_GREEN + "C" + ChatColor.GREEN + "ave" + ChatColor.DARK_GREEN + "W" + ChatColor.GREEN + "ars. " + ChatColor.RED + "[" + ChatColor.GOLD + PlayersInLobby.size() + "/" + "16" + ChatColor.RED + "]");
 		   }
